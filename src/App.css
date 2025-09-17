@@ -1,0 +1,215 @@
+/* Linux Terminal Portfolio Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  background: #0c0c0c;
+  color: #e0e0e0;
+  font-family: 'Ubuntu Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+  overflow: hidden;
+}
+
+/* Terminal Color Scheme */
+:root {
+  --bg-primary: #0c0c0c;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-green: #4ade80;
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  --accent-orange: #fb923c;
+  --accent-red: #f87171;
+  --accent-yellow: #fbbf24;
+  --border-color: #374151;
+}
+
+/* Terminal Container */
+.terminal-container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  cursor: text;
+}
+
+.terminal-header {
+  background: var(--bg-tertiary);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-color);
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.terminal-button.close {
+  background: var(--accent-red);
+}
+.terminal-button.minimize {
+  background: var(--accent-yellow);
+}
+.terminal-button.maximize {
+  background: var(--accent-green);
+}
+
+.terminal-title {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  background: var(--bg-primary);
+}
+
+/* Terminal Entries */
+.terminal-entry {
+  margin-bottom: 4px;
+}
+
+.terminal-input-line {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.terminal-prompt {
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-right: 8px;
+  user-select: none;
+}
+
+.terminal-command {
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+
+.terminal-output-line {
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  margin-left: 4px;
+  line-height: 1.4;
+}
+
+/* Input Container */
+.terminal-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.terminal-input-container form {
+  flex: 1;
+  display: flex;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  flex: 1;
+  caret-color: var(--accent-green);
+}
+
+.terminal-input::selection {
+  background: rgba(74, 222, 128, 0.3);
+}
+
+/* Custom Scrollbar */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(96, 165, 250, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terminal-body {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .terminal-header {
+    padding: 6px 12px;
+    height: 36px;
+  }
+
+  .terminal-title {
+    font-size: 12px;
+  }
+}
+
+/* Animation for new entries */
+.terminal-entry {
+  animation: fadeIn 0.1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Color coding for different file types and commands */
+.terminal-output-line {
+  white-space: pre-wrap;
+}
+
+/* Directory listings */
+.terminal-output-line:has-text("📁") {
+  color: var(--accent-blue);
+}
+
+.terminal-output-line:has-text("📄") {
+  color: var(--text-primary);
+}
