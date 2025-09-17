@@ -1,5 +1,5 @@
 import React from 'react'
-import { TerminalOutput as TerminalOutputType } from '../../types/terminal.types'
+import type { TerminalOutput as TerminalOutputType } from '../../types/terminal.types'
 
 interface TerminalOutputProps {
   history: TerminalOutputType[]

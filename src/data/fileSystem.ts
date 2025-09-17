@@ -1,4 +1,4 @@
-import { FileSystem } from '../types/terminal.types'
+import type { FileSystem } from '../types/terminal.types'
 
 export const fileSystem: FileSystem = {
   '/home/kwanjoon-park': {

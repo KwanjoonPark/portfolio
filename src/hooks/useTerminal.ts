@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { TerminalOutput } from '../types/terminal.types'
+import type { TerminalOutput } from '../types/terminal.types'
 import { executeCommand } from '../utils/commandExecutor'
 
 export const useTerminal = () => {
