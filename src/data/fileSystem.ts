@@ -12,7 +12,7 @@ export const fileSystem: FileSystem = {
   "role": "Full Stack Developer",
   "location": "South Korea",
   "experience": "1+ years",
-  "education": "Software Engineering",
+  "education": "Chonnam National University Software Engineering",
   "languages": ["Korean", "English"],
   "interests": ["Web Development", "AI/ML", "Open Source"],
   "motto": "Code with passion, learn continuously"
@@ -21,11 +21,39 @@ export const fileSystem: FileSystem = {
   '/home/kwanjoon-park/projects': {
     type: 'directory',
     contents: [
-      'Study With/', '해병대 위험성평가체계/', '비행안전진단체계/',
-      'DAWN/', 'Mirror Scope/', 'BreadVenture/', 'LocQuest/', '소난투/', 'Mentree/'
+      'StudyWith/', '해병대_위험성평가체계/', '비행안전진단체계/',
+      'DAWN/', 'MirrorScope/', 'BreadVenture/', 'LocQuest/', '소난투/', 'Mentree/'
     ]
   },
-  '/home/kwanjoon-park/projects/portfolio-website': {
+  '/home/kwanjoon-park/projects/StudyWith': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/해병대_위험성평가체계': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/비행안전진단체계': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/DAWN': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/MirrorScope': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/LocQuest': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/소난투': {
+    type: 'directory',
+    contents: ['README.md', 'demo.txt', 'tech-stack.json']
+  },
+  '/home/kwanjoon-park/projects/Mentree': {
     type: 'directory',
     contents: ['README.md', 'demo.txt', 'tech-stack.json']
   },
